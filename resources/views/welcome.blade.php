@@ -1,11 +1,11 @@
 <!doctype html>
-<html>
+<html class="">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     @vite('resources/css/app.css')
 </head>
-<body class="bg-gradient-to-b from-blue-500/80 to-yellow-500/80">
+<body class="bg-blue-400">
 <div class="max-w-screen-xl mx-auto h-screen grid grid-rows-[auto-1fr-auto]">
     <header class="px-2 border-b h-14 flex items-center justify-between">
             <a href="" class="uppercase font-bold text-2xl text-white hover:text-amber-300">Uanews</a>
@@ -18,7 +18,7 @@
             </nav>
     </header>
     <div>
-        <main class="px-2">
+        <main class="flex w-full flex-col m-2">
 @yield('content')
         </main>
     </div>
