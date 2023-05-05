@@ -4,11 +4,11 @@ namespace App\Http\Controllers\Post;
 
 use App\Models\Post;
 
-class IndexController
+class CreateController
 {
     public function __invoke()
     {
-        $posts = Post::paginate(6);
-        return view('post.index', compact('posts'));
+
+       return view("post.create");
     }
 }

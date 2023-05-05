@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\Post\IndexController;
+use App\Http\Controllers\Post\{CreateController, IndexController, ShowController};
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,4 +17,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/posts', IndexController::class)->name('post.index');
+Route::get('/posts', IndexController::class)->name('posts.index');
+Route::get('/posts/{post}', ShowController::class)->name('posts.show');
+Route::get('/post/create', CreateController::class)->name('posts.create');
