@@ -1,6 +1,11 @@
 <?php
 
-use App\Http\Controllers\Post\{CreateController, IndexController, ShowController, StoreController};
+use App\Http\Controllers\Post\{CreateController,
+    EditController,
+    IndexController,
+    ShowController,
+    StoreController,
+    UpdateController};
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,3 +26,5 @@ Route::get('/posts', IndexController::class)->name('posts.index');
 Route::get('/posts/{post}', ShowController::class)->name('posts.show');
 Route::get('/post/create', CreateController::class)->name('posts.create');
 Route::post('/posts', StoreController::class)->name('posts.store');
+Route::get('/posts/{post}/edit', EditController::class)->name('posts.edit');
+Route::patch('/posts/{post}', UpdateController::class)->name('posts.update');

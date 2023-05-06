@@ -3,6 +3,9 @@
 @tailwind utilities;
 @layer components {
     .header-link{
-        @apply font-semibold text-white inline-block py-3 px-2 border-b-2 border-transparent hover:text-amber-300 hover:border-amber-300;
+        @apply font-semibold text-white inline-block py-3 px-2 border-b-2 border-transparent hover:text-blue-600 hover:border-blue-600;
+    }
+    .button-ua{
+        @apply cursor-pointer  border-2 border-yellow-500 px-4 py-1 rounded-2xl text-white;
     }
 }

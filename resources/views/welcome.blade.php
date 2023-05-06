@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     @vite('resources/css/app.css')
 </head>
-<body class="bg-gradient-to-b from-blue-500 to-yellow-400">
+<body class="bg-gradient-to-r from-blue-600 to-yellow-400">
 <div class="max-w-screen-xl mx-auto h-screen grid grid-rows-[auto-1fr-auto]">
     <header class="px-2 border-b h-14 flex items-center justify-between">
         <a href="{{route('home')}}" class="uppercase font-bold text-2xl text-white hover:text-amber-300">Uanews</a>
@@ -16,9 +16,10 @@
             </ul>
 
         </nav>
-    </header>npm run dev
+    </header>
     <div>
         <main class="flex w-full flex-col m-2">
+
             @yield('content')
         </main>
     </div>

@@ -10,4 +10,9 @@ class Service
     {
      return Post::create($data);
     }
+
+    public function update($data,$post)
+    {
+        return $post->update($data);
+    }
 }
