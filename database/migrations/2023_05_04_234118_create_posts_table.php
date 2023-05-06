@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->text('content')->nullable(true);
-            $table->string('image')->nullable(true);
+            $table->string('image',1000)->nullable(true);
             $table->unsignedBigInteger('user_id')->nullable(true);
             $table->timestamps();
             $table->softDeletes();
