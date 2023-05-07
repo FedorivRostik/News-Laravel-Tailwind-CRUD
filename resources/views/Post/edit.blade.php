@@ -37,9 +37,9 @@
                 @enderror
             </div>
 
-            <div class="w-11/12 flex justify-end">
-
-                <input type="submit" class="cursor-pointer  border-2 border-yellow-500 px-4 py-1 rounded-2xl text-white"
+            <div class="w-11/12 flex justify-around">
+                <a href="{{url()->previous()}}" class="button-ua">Back</a>
+                <input type="submit" class="button-ua"
                        value="Edit">
             </div>
         </form>
