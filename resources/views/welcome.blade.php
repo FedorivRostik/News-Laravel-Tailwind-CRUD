@@ -17,24 +17,18 @@
 
         </nav>
     </header>
-    <div>
+    <div class="w-full">
         <main class="flex w-full flex-col m-2">
 
             @yield('content')
         </main>
     </div>
 
-    <footer class="px-2 border-t">
-        <div class="">
-            <div>
-                <h6>
-                    <ul>
-                        <li><a href=""></a></li>
-                        <li><a href=""></a></li>
-                    </ul>
-                </h6>
-            </div>
-        </div>
+    <footer class="flex justify-end px-2 border-t">
+        <p class="p-4 text-xs text-white font-semibold">
+           @ 2023-{{now()->year }} <a class="text-blue-600 font-bold  hover:underline" href="https://t.me/ljutyk">Rostyslav Fedoriv</a>
+            All rights reserved
+        </p>
     </footer>
 </div>
 </body>
