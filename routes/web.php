@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Post\{CreateController,
+    DestroyController,
     EditController,
     IndexController,
     ShowController,
@@ -28,3 +29,4 @@ Route::get('/post/create', CreateController::class)->name('posts.create');
 Route::post('/posts', StoreController::class)->name('posts.store');
 Route::get('/posts/{post}/edit', EditController::class)->name('posts.edit');
 Route::patch('/posts/{post}', UpdateController::class)->name('posts.update');
+Route::delete('/posts/{post}', DestroyController::class)->name('posts.destroy');

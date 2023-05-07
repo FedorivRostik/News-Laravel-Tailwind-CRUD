@@ -8,9 +8,15 @@
                 <img class="w-80 h-64 object-cover  rounded-2xl border-yellow-400 border-2" src="{{$post->image}}"
                      alt="">
             </div>
-            <div class="flex justify-around w-40 items-center">
+            <div class="flex justify-around w-64 items-center">
                 <a href="{{route('posts.index')}}" class="button-ua">Back</a>
-            <a href="{{route('posts.edit',$post->id)}}" class="button-ua">Edit</a>
+                <a href="{{route('posts.edit',$post->id)}}" class="button-ua">Edit</a>
+                <form action="{{route('posts.destroy',$post->id)}}" method="post">
+                    <input type="submit" class="button-ua text-red-600 " value="Delete">
+                    @method('delete')
+                    @csrf
+                </form>
+
             </div>
 
             <div class="flex flex-col items-center">
