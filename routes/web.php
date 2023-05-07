@@ -1,5 +1,12 @@
 <?php
 
+use App\Http\Controllers\Post\{CreateController,
+    DestroyController,
+    EditController,
+    IndexController,
+    ShowController,
+    StoreController,
+    UpdateController};
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,4 +22,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('home');
+Route::get('/posts', IndexController::class)->name('posts.index');
+Route::get('/posts/{post}', ShowController::class)->name('posts.show');
+Route::get('/post/create', CreateController::class)->name('posts.create');
+Route::post('/posts', StoreController::class)->name('posts.store');
+Route::get('/posts/{post}/edit', EditController::class)->name('posts.edit');
+Route::patch('/posts/{post}', UpdateController::class)->name('posts.update');
+Route::delete('/posts/{post}', DestroyController::class)->name('posts.destroy');
